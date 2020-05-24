@@ -124,6 +124,7 @@ namespace RockPaperScissors
                     paperButton.Enabled = false;
                     scissorsButton.Enabled = false;
                     label13.Text = "PC Wins";
+                    playAgainButton.Enabled = true;
                 }
                 if (playerWins == 2)
                 {
@@ -131,6 +132,7 @@ namespace RockPaperScissors
                     paperButton.Enabled = false;
                     scissorsButton.Enabled = false;
                     label13.Text = "Player Wins";
+                    playAgainButton.Enabled = true;
                 }
             }
             if (game == 3)
@@ -143,9 +145,6 @@ namespace RockPaperScissors
                 {
                     round3Result.Text = "PC";
                 }
-                rockButton.Enabled = false;
-                paperButton.Enabled = false;
-                scissorsButton.Enabled = false;
                 if (playerWins > pcWins)
                 {
                     label13.Text = "Player Wins";
@@ -154,6 +153,10 @@ namespace RockPaperScissors
                 {
                     label13.Text = "PC Wins";
                 }
+                rockButton.Enabled = false;
+                paperButton.Enabled = false;
+                scissorsButton.Enabled = false;
+                playAgainButton.Enabled = true;
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -204,6 +207,7 @@ namespace RockPaperScissors
             screenPc.Image = rps;
             screenPlayer.Image = rps;
             label13.Text = "";
+            playAgainButton.Enabled = false;
         }
     }
 }
